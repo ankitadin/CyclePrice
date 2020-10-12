@@ -31,7 +31,7 @@ public class Wheel extends CyclePart {
 	
 	public void function(float tubetype) throws CycleException{
 		super.function(tubetype);
-		float pricewheela = tubetype / this.wheeltube;
+		float pricewheela = tubetype+this.wheeltube;
            this.setPricewheel(pricewheela);
 	       this.totalprice(pricewheela);
 
