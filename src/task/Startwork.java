@@ -1,6 +1,6 @@
 package task;
 
-public class Simulator {
+public class Startwork{
 
 	public static void main(String[] args) {
 		
