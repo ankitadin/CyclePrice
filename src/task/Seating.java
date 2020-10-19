@@ -1,9 +1,12 @@
 package task;
 
+import java.util.Scanner;
+
 public class Seating extends CyclePart {
-	private float engineAgeModifier;
+	private float luxarysit;
 	private float seatingprice;
-	
+	Scanner sc=new Scanner(System.in);
+
 	
 	public Seating()
 	{
@@ -19,23 +22,26 @@ public class Seating extends CyclePart {
 		this.seatingprice = seatingprice;
 	}
 
-	public Seating(float engineAgeModifier) {
+	public Seating(String seat) {
 		super("seating");
-		this.engineAgeModifier = engineAgeModifier;
+		System.out.println("seating congf");
+		System.out.println("enter luxary sit ");
+		
+		this.luxarysit = sc.nextFloat();
 	}
 	
 	/* GETTERS */
 	
-	public float getEngineAgeModifier() { return this.engineAgeModifier; }
+	public float getEngineAgeModifier() { return this.luxarysit; }
 	
 	/* SETTERS */
 	
 	public void setEngineAgeModifier(float newModifier) {
-		this.engineAgeModifier = newModifier;
+		this.luxarysit = newModifier;
 	}
 	
 	public void function(float milesDriven) throws CycleException{
-		float seatingpricea=milesDriven*20;
+		float seatingpricea=milesDriven+luxarysit;
 		this.setSeatingprice(seatingpricea);
 	       this.totalprice(seatingpricea);
 

@@ -1,10 +1,13 @@
 package task;
 
+import java.util.Scanner;
+
 public class Chaning extends CyclePart{
 	
 	private float chain;
 	private float chainprice;
-	
+	Scanner sc=new Scanner(System.in);
+
 	public Chaning()
 	{
 		super();
@@ -18,9 +21,11 @@ public class Chaning extends CyclePart{
 		this.chainprice = chainprice;
 	}
 
-		public Chaning(float chain) {
+		public Chaning(String chain) {
 		super("chaning");
-		this.chain=chain;
+		System.out.println("enter chain type");
+		
+		this.chain=sc.nextFloat();
 	}
 	
 	
